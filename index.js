@@ -22,7 +22,7 @@ inquirer.prompt([
 {
     type:'input',
     name:'installation',
-    message:'Give instructions on how to install (if any).'
+    message:'Give instructions on how to install (if applicable).'
 
 },
 {
@@ -32,15 +32,34 @@ inquirer.prompt([
 
 },
 {
-    type:'',
+    type:'list',
     name:'license',
-    message:'Which license is this project using?'
+    message:'Which license is this project using?',
+    choices:['BSD 2-Clause "Simplified" or "FreeBSD" license',
+    'GNU General Public License (GPL)',
+    'GNU Library or "Lesser" General Public License (LGPL)',
+    'MIT license',
+    'Mozilla Public License 2.0',
+    'Common Development and Distribution License',
+    'Eclipse Public License version 2.0']
 
 },
 {
     type:'input',
     name:'Contributing',
-    message:'Provide instructions and examples for use.'
+    message:'Include instructions on how others can contributr to your project (if applicable).'
+
+},
+{
+    type:'input',
+    name:'Tests',
+    message:'Write tests for your project here: (if applicable).'
+
+},
+{
+    type:'input',
+    name:'Questions',
+    message:'Please include a way for users to contact you with questions (GitHub/Email)'
 
 },
 ])

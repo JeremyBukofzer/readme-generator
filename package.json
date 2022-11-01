@@ -1,22 +1,23 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
+  "type":"module",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JeremyBukofzer/readme-generator.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/JeremyBukofzer/readme-generator/issues"
   },
   "homepage": "https://github.com/JeremyBukofzer/readme-generator#readme",
-  "description": "",
   "dependencies": {
     "inquirer": "^9.1.4"
   }
