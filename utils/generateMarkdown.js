@@ -1,7 +1,9 @@
+function generateMarkdown(data) {
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let licenseChoice = license
+  let licenseChoice = data.license
   let licenseBadge = ''
   if (licenseChoice === 'MIT') {
     licenseBadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
@@ -24,7 +26,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let licenseChoice = license
+  let licenseChoice = data.license 
   let licenseLink = ''
   if (licenseChoice === 'MIT') {
     licenseLink = '(https://opensource.org/licenses/MIT)'
@@ -49,39 +51,56 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseSection = ''
-  if (license.length === )
-
-
-
-}
+  if (license !== '') {
+    licenseSection += 
+    renderLicenseBadge() + renderLicenseLink()
+  } else {
+    license = ''
+  }
+  return licenseSection
+  
+};
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
   return `# ${data.title}
 
-  ##Description
-   ${data.description}
+  ## Description
 
-  ##Table of Contents
-   ${data.tableOfContents}
+  ${data.description}
 
-  ##Installation
-   ${data.installation}
+  ## Table of Contents
 
-  ##Usage 
-   ${data.usage}
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
-  ##License
-   ${data.license}
 
-  ##Contributing
-   ${data.contributing}
+  ## Installation
 
-  ##Tests
-   ${data.tests}
+  ${data.installation}
 
-  ##Questions
-   - [GitHub](${data.github})
+  ## Usage 
+
+  ${data.usage}
+
+  ## License
+
+  ${renderLicenseSection()}
+
+
+  ## Contributing
+
+  ${data.contributing}
+
+  ## Tests
+
+  ${data.tests}
+
+  ## Questions
+   - [GitHub:${data.github}](https://github.com/${data.github})
    - [Email](${data.email})
 
 `;

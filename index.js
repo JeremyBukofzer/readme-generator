@@ -36,7 +36,7 @@ inquirer.prompt([
         type: 'list',
         name: 'license',
         message: 'Which license is this project using?',
-        choices: ['MIT', 'Apache License 2.0', 'ISC License', 'BSD 3-Clause License']
+        choices: ['MIT', 'Apache License 2.0', 'ISC License', 'BSD 3-Clause License', 'N/A']
 
     },
     {
@@ -53,7 +53,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'gitHub',
+        name: 'github',
         message: 'What is your GitHub username?'
 
     },
@@ -70,10 +70,10 @@ inquirer.prompt([
         const readme = generateMarkdown(answers)
         console.log(readme)
 
-        fs.writeFile('./README.md', readme, error => {
+        fs.writeFile('./GeneratedREADME.md', readme, error => {
             if (error) throw error
 
-            console.log('README saved!')
+            console.log('README file was created!')
         })
     })
 
