@@ -1,7 +1,6 @@
+//function to generate the readme file.
 function generateMarkdown(data) {
-
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//function that renders license badge
 function renderLicenseBadge(license) {
   let licenseChoice = data.license
   let licenseBadge = ''
@@ -9,22 +8,20 @@ function renderLicenseBadge(license) {
     licenseBadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]'
   }
   else if (licenseChoice === 'Apache License 2.0') {
-    licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]'
+    licenseBadge = '[![License: Apache License 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]'
   }
   else if (licenseChoice === 'ISC License') {
-    licenseBadge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]'
+    licenseBadge = '[![License:ISC](https://img.shields.io/badge/License-ISC-blue.svg)]'
   }
   else if (licenseChoice === 'BSD 3-Clause License') {
-    licenseBadge = '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]'
+    licenseBadge = '[![License: BSD 3-Clause License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]'
   }
   else {
     license = ''
   }
   return licenseBadge
 };
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//function that renders license link
 function renderLicenseLink(license) {
   let licenseChoice = data.license 
   let licenseLink = ''
@@ -47,8 +44,7 @@ function renderLicenseLink(license) {
 
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//function that renders license section with link and badge
 function renderLicenseSection(license) {
   let licenseSection = ''
   if (license !== '') {
@@ -60,8 +56,7 @@ function renderLicenseSection(license) {
   return licenseSection
   
 };
-
-// TODO: Create a function to generate markdown for README
+// markdown content layout to be generated
   return `# ${data.title}
 
   ## Description
@@ -105,5 +100,5 @@ function renderLicenseSection(license) {
 
 `;
 }
-
+//exports above content to write a new readme file
 export default generateMarkdown;

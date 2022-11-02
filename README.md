@@ -4,18 +4,10 @@
 
   Generates a README.md file for any project you create.
 
-  ## Table of Contents
 
-
-  - [Usage](#usage)
-  - [License](#license)
-  - [Questions](#questions)
-
-
-  
 
   ## Usage 
-
+[watch the video guide](https://drive.google.com/file/d/1kVcSw0NHZc_fPhhdKKYS5m-KLIuR-XC1/view)
   
 
   ## License

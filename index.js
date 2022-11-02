@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application
+//packages used
 import fs from 'fs';
 import inquirer from 'inquirer';
 import generateMarkdown from './utils/generateMarkdown.js';
 
 console.log(generateMarkdown)
 
-// TODO: Create an array of questions for user input
+//questions to fill out markdown
 inquirer.prompt([
 
     {
@@ -69,7 +69,7 @@ inquirer.prompt([
 
         const readme = generateMarkdown(answers)
         console.log(readme)
-
+        //creates a readme file
         fs.writeFile('./GeneratedREADME.md', readme, error => {
             if (error) throw error
 
@@ -79,11 +79,4 @@ inquirer.prompt([
 
     .catch(error => console.log(error))
 
-// TODO: Create a function to write README file
-// fs.writeToFile('./README.md', data) {}
 
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
