@@ -7,61 +7,62 @@ console.log(generateMarkdown)
 
 // TODO: Create an array of questions for user input
 inquirer.prompt([
+
     {
-    type:'input',
-    name:'title',
-    message:'What is the title of your project?'
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?'
 
-},
-{
-    type:'input',
-    name:'description',
-    message:'Give a description of you project.'
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Give a description of you project.'
 
-},
-{
-    type:'input',
-    name:'installation',
-    message:'Give instructions on how to install (if applicable).'
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Give instructions on how to install (if applicable).'
 
-},
-{
-    type:'input',
-    name:'usage',
-    message:'Provide instructions and examples for use.'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Provide instructions and examples for use.'
 
-},
-{
-    type:'list',
-    name:'license',
-    message:'Which license is this project using?',
-    choices:['BSD 2-Clause "Simplified" or "FreeBSD" license',
-    'GNU General Public License (GPL)',
-    'GNU Library or "Lesser" General Public License (LGPL)',
-    'MIT license',
-    'Mozilla Public License 2.0',
-    'Common Development and Distribution License',
-    'Eclipse Public License version 2.0']
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Which license is this project using?',
+        choices: ['MIT', 'Apache License 2.0', 'ISC License', 'BSD 3-Clause License']
 
-},
-{
-    type:'input',
-    name:'Contributing',
-    message:'Include instructions on how others can contributr to your project (if applicable).'
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Include instructions on how others can contributr to your project (if applicable).'
 
-},
-{
-    type:'input',
-    name:'Tests',
-    message:'Write tests for your project here: (if applicable).'
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Write tests for your project here: (if applicable).'
 
-},
-{
-    type:'input',
-    name:'Questions',
-    message:'Please include a way for users to contact you with questions (GitHub/Email)'
+    },
+    {
+        type: 'input',
+        name: 'gitHub',
+        message: 'What is your GitHub username?'
 
-},
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is a good email that users can send questions to?'
+
+    },
 ])
     .then(answers => {
         console.log(answers)
@@ -70,7 +71,7 @@ inquirer.prompt([
         console.log(readme)
 
         fs.writeFile('./README.md', readme, error => {
-            if(error) throw error
+            if (error) throw error
 
             console.log('README saved!')
         })
